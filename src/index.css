@@ -1,0 +1,25 @@
+/* Shared page defaults. Form styles live in App.css. */
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #f4f6ee;
+  background: #10240e;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 280px;
+}
+
+button,
+input {
+  font: inherit;
+}

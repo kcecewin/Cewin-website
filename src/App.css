@@ -1,0 +1,346 @@
+/* Layered gradients create the background without any image assets. */
+.auth-page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  /* GenLab-inspired forest green and soft, organic lime light. */
+  background:
+    linear-gradient(180deg, rgba(7, 10, 5, 0.16), rgba(7, 10, 5, 0.48)),
+    radial-gradient(ellipse at 4% 8%, #869812 0%, transparent 28%),
+    radial-gradient(ellipse at 13% 55%, #829909 0%, transparent 25%),
+    radial-gradient(ellipse at 38% 69%, #6c830e 0%, transparent 23%),
+    radial-gradient(ellipse at 69% 5%, #73870c 0%, transparent 22%),
+    radial-gradient(ellipse at 97% 12%, #3c5010 0%, transparent 26%),
+    #10240e;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 36px 38px;
+  border: 1px solid rgba(218, 235, 190, 0.2);
+  border-radius: 24px;
+  background: rgba(15, 20, 14, 0.88);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(18px);
+  text-align: center;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 20px;
+  border-radius: 15px;
+  background: #c2e600;
+  color: #142006;
+  font-size: 30px;
+}
+
+.brand-mark img {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #bdcf9b;
+  font-size: clamp(18px, 4.5vw, 22px);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+
+.auth-card h1 {
+  margin: 0 0 10px;
+  font-size: clamp(26px, 5vw, 30px);
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 0;
+  color: #b2bcaa;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+  text-align: left;
+}
+
+.auth-card label {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.auth-card input {
+  width: 100%;
+  min-height: 48px;
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1px solid #46503e;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f4f6ee;
+  font-size: 16px;
+  transition: border-color 150ms, box-shadow 150ms;
+}
+
+.auth-card input::placeholder {
+  color: #a4ae9b;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #c2e600;
+  box-shadow: 0 0 0 3px rgba(194, 230, 0, 0.16);
+}
+
+.auth-card button {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms, box-shadow 150ms;
+}
+
+.primary-button {
+  margin-top: 4px;
+  border: 1px solid transparent;
+  background: #c2e600;
+  color: #142006;
+  box-shadow: 0 5px 12px rgba(194, 230, 0, 0.12);
+}
+
+.primary-button:hover {
+  background: #d3f526;
+  box-shadow: 0 6px 16px rgba(194, 230, 0, 0.2);
+}
+
+.auth-card button:focus-visible {
+  outline: 3px solid #c2e600;
+  outline-offset: 3px;
+}
+
+.form-divider {
+  height: 1px;
+  margin: 26px 0 20px;
+  background: #35402e;
+}
+
+.switch-prompt {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: #b2bcaa;
+  line-height: 1.5;
+}
+
+.navigation-button {
+  border: 1px solid #596b3b;
+  background: transparent;
+  color: #d1eb87;
+}
+
+.navigation-button:hover {
+  background: #29351b;
+}
+
+@media (max-width: 480px) {
+  .form-panel {
+    padding: 24px 16px;
+  }
+
+  .auth-card {
+    padding: 28px 22px;
+    border-radius: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-card input,
+  .auth-card button {
+    transition: none;
+  }
+}
+
+/* Native details keeps the About panel simple and keyboard accessible. */
+.about-company {
+  margin-top: 20px;
+  border-top: 1px solid #35402e;
+  text-align: left;
+}
+
+.about-company summary {
+  padding: 16px 4px;
+  color: #d1eb87;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about-company summary:hover {
+  color: #d3f526;
+}
+
+.about-company summary:focus-visible,
+.about-content a:focus-visible {
+  outline: 3px solid #c2e600;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.about-content {
+  padding: 4px 0 0;
+  color: #b2bcaa;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.about-content h2 {
+  margin: 0 0 12px;
+  color: #f4f6ee;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.about-content p {
+  margin: 0 0 12px;
+}
+
+.about-content ul {
+  padding-left: 20px;
+  margin: 0 0 12px;
+}
+
+.about-content li + li {
+  margin-top: 8px;
+}
+
+.about-content strong {
+  color: #f4f6ee;
+}
+
+.about-content a {
+  display: inline-block;
+  padding: 10px 0;
+  color: #d1eb87;
+  text-underline-offset: 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Equal image and form columns; the form can grow when About is open. */
+.laptop-panel {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #0b170e;
+}
+
+.laptop-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.laptop-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(5, 14, 7, 0.94));
+  pointer-events: none;
+}
+
+.laptop-caption {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  padding: clamp(28px, 4vw, 64px);
+  max-width: 600px;
+}
+
+.laptop-kicker {
+  color: #c2e600;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.laptop-caption h2 {
+  margin: 16px 0;
+  font-size: clamp(30px, 3.4vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: #f4f6ee;
+}
+
+.laptop-caption p:last-child {
+  max-width: 340px;
+  color: #c1cbb8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 40px 24px;
+}
+
+@media (max-width: 760px) {
+  .auth-page {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .laptop-panel {
+    min-height: 0;
+    height: 300px;
+  }
+
+  .laptop-image {
+    object-position: center 48%;
+  }
+
+  .laptop-caption {
+    padding: 20px 24px;
+  }
+
+  .laptop-caption h2 {
+    font-size: 26px;
+    margin: 8px 0 0;
+  }
+
+  .laptop-caption p:last-child {
+    display: none;
+  }
+
+  .form-panel {
+    padding: 28px 16px;
+  }
+}
