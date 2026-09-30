@@ -344,3 +344,39 @@
     padding: 28px 16px;
   }
 }
+
+/* Authentication feedback uses the existing card and color palette. */
+.auth-message {
+  padding: 12px 14px;
+  border: 1px solid #596b3b;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.auth-message.error {
+  color: #ffd0ca;
+  background: #3b2424;
+  border-color: #84534b;
+}
+
+.auth-message.success {
+  color: #d1eb87;
+  background: #29351b;
+}
+
+.auth-card button:disabled,
+.auth-card input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.welcome-content {
+  overflow-wrap: anywhere;
+}
+
+.welcome-email {
+  margin: 24px 0;
+  color: #bdcf9b;
+}
